@@ -1,0 +1,23 @@
+{
+  "name": "@example-ui/shared",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Edilberto Vazquez Luna <edi_vazquez12@hotmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@example-ui/material": "^1.0.0",
+    "@example-ui/mathematical-operations": "1.0.0"
+  }
+}

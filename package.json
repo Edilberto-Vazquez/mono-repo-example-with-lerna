@@ -1,0 +1,28 @@
+{
+  "name": "example-ui",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "version": "0.0.1",
+  "description": "This monorepo will hold all the packages for the fronted teams.",
+  "main": "index.js",
+  "private": true,
+  "devDependencies": {
+    "lerna": "4.0.0",
+    "webpack": "5.70.0"
+  },
+  "scripts": {
+    "bootstrap": "yarn install; lerna bootstrap;",
+    "start": "lerna run start --parallel",
+    "start:app": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope example-app --stream dev",
+    "build:app": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope example-app --stream build",
+    "run:build:app": "lerna run start --scope example-app",
+    "start:app_alt": "lerna run --scope example-app --stream dev",
+    "storybook:app": "lerna run --scope example-app --stream storybook"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
